@@ -3,22 +3,23 @@ let feedback = document.getElementById("feedback");
 const btn = document.getElementById("submit-answer");
 function checkAnswer() {
   let correctAnswer = "4";
-  selectedAnswer = null;
-  const userAnswer = document.querySelector('input[name="quiz"]:checked');
-  if (userAnswer) {
-    selectedAnswer = userAnswer.value;
-    if (selectedAnswer === correctAnswer) {
+  userAnswer = null;
+  const useranswer = document.querySelector('input[name="quiz"]:checked');
+  if (useranswer) {
+    userAnswer = useranswer.value;
+    if (userAnswer === correctAnswer) {
       feedback.textContent = "Correct! Well done.";
 
-      console.log(selectedAnswer);
-    } else if (selectedAnswer !== correctAnswer) {
+      console.log(userAnswer);
+    } else if (userAnswer !== correctAnswer) {
+      userAnswer === correctAnswer;
       feedback.textContent = "That's incorrect. Try again!";
 
-      console.log(selectedAnswer);
+      console.log(userAnswer);
     }
 
     console.log("Feedback", feedback.textContent);
-    console.log("Selected Answer", selectedAnswer);
+    console.log("Selected Answer", userAnswer);
   } else {
     feedback.textContent = "Pick an option";
   }
